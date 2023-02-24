@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "postinstall": "yarn --cwd ./app1 install && yarn --cwd ./app2 install && yarn --cwd ./app3 install",
+    "start": "concurrently \"yarn --cwd ./app1 start\" \"yarn --cwd ./app2 start\" \"yarn --cwd ./app3 start\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
